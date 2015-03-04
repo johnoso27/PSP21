@@ -112,7 +112,7 @@ public class VistaWeb {
         pw.println("<h1>Captura de datos</h1>");
         pw.write("<form  method=\"post\">\n"
                 + "<div><h2>Cálculo de la integral numérica de 0 a x</h2></div> \n"
-                + "<div><label style=\"width:1500; display: inline-block;\" >X:</label><input  style=\"width:300;\" title=\"Es un valor doble\" type=\"text\" name=\"datosx\" id=\"datosx\"></div> \n"
+               // + "<div><label style=\"width:1500; display: inline-block;\" >X:</label><input  style=\"width:300;\" title=\"Es un valor doble\" type=\"text\" name=\"datosx\" id=\"datosx\"></div> \n"
                 + "<div><label style=\"width:1500; display: inline-block;\" >Segmentos:</label><input  style=\"width:300;\" title=\"Es un valor entero\" type=\"text\" name=\"segmento\" id=\"segmento\"</div> \n"
                 + "<div><label style=\"width:1500; display: inline-block;\" >Margen error (E):</label><input  style=\"width:300;\" title=\"Es un valor doble\" type=\"text\" name=\"error\" id=\"error\"</div> \n"
                 + "<div><label style=\"width:1500; display: inline-block;\" >Grados de libertad (dof):</label><input  style=\"width:300;\" title=\"Es un valor doble\" type=\"text\" name=\"dof\" id=\"dof\"</div> \n"
