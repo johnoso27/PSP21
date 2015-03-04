@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Reverse engineered psp21 2015.03.03 21-47-38-999">
+  <ClassDiagramComponents>
+    <Class xPosition="551.0" yPosition="286.0" package="edu.uniandes.ecos.psp21.controlador" name="ControladorIntegralNumerica" visibility="public">
+      <Constructors/>
+      <Fields/>
+      <Methods>
+        <Method name="main" visibility="public" returnType="void" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+        <Method name="doGet" visibility="protected" returnType="void">
+          <Argument type="HttpServletRequest" name="req"/>
+          <Argument type="HttpServletResponse" name="resp"/>
+        </Method>
+        <Method name="doPost" visibility="protected" returnType="void">
+          <Argument type="HttpServletRequest" name="req"/>
+          <Argument type="HttpServletResponse" name="resp"/>
+        </Method>
+        <Method name="calculoTest" visibility="private" returnType="void" isStatic="true">
+          <Argument type="HttpServletRequest" name="req"/>
+          <Argument type="HttpServletResponse" name="resp"/>
+        </Method>
+        <Method name="calculoEntrada" visibility="private" returnType="void" isStatic="true">
+          <Argument type="HttpServletRequest" name="req"/>
+          <Argument type="HttpServletResponse" name="resp"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class xPosition="464.0" yPosition="535.0" package="edu.uniandes.ecos.psp21.modelo" name="CalculadorIntegralNumerica" visibility="public">
+      <Constructors/>
+      <Fields>
+        <Field name="auxiliarX" visibility="private" type="double"/>
+        <Field name="cambioSigno" visibility="private" type="boolean"/>
+      </Fields>
+      <Methods>
+        <Method name="calcularIntegralNumerica" visibility="public" returnType="double">
+          <Argument type="int" name="numeroSegmentos"/>
+          <Argument type="double" name="x"/>
+          <Argument type="double" name="dof"/>
+        </Method>
+        <Method name="calcularIntegralNumericaEnMargenError" visibility="public" returnType="double">
+          <Argument type="int" name="numeroSegmentos"/>
+          <Argument type="double" name="x"/>
+          <Argument type="double" name="e"/>
+          <Argument type="double" name="dof"/>
+        </Method>
+        <Method name="calcularLimiteIntegral" visibility="public" returnType="double">
+          <Argument type="int" name="numeroSegmentos"/>
+          <Argument type="double" name="p"/>
+          <Argument type="double" name="e"/>
+          <Argument type="double" name="dof"/>
+        </Method>
+        <Method name="buscarLimite" visibility="private" returnType="double">
+          <Argument type="double" name="x"/>
+          <Argument type="int" name="numeroSegmentos"/>
+          <Argument type="double" name="p"/>
+          <Argument type="double" name="e"/>
+          <Argument type="double" name="dof"/>
+        </Method>
+        <Method name="calcularGamma" visibility="private" returnType="double">
+          <Argument type="double" name="n"/>
+          <Argument type="double" name="d"/>
+        </Method>
+        <Method name="calculaParteDeFx" visibility="private" returnType="double">
+          <Argument type="double" name="dof"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class xPosition="217.0" yPosition="324.0" package="edu.uniandes.ecos.psp21.vista" name="VistaConsola" visibility="public">
+      <Constructors/>
+      <Fields/>
+      <Methods>
+        <Method name="mostrarResultado" visibility="public" returnType="void" isStatic="true">
+          <Argument type="String" name="resultado"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class xPosition="39.0" yPosition="46.0" package="edu.uniandes.ecos.psp21.vista" name="VistaWeb" visibility="public">
+      <Constructors/>
+      <Fields/>
+      <Methods>
+        <Method name="mostrarFormunlarioInicial" visibility="public" returnType="void" isStatic="true">
+          <Argument type="HttpServletRequest" name="req"/>
+          <Argument type="HttpServletResponse" name="resp"/>
+        </Method>
+        <Method name="mostrarResultados" visibility="public" returnType="void" isStatic="true">
+          <Argument type="HttpServletRequest" name="req"/>
+          <Argument type="HttpServletResponse" name="resp"/>
+          <Argument type="Double" name="resultado"/>
+          <Argument type="Integer" name="segmento"/>
+          <Argument type="Double" name="x"/>
+          <Argument type="Double" name="e"/>
+          <Argument type="Double" name="dof"/>
+          <Argument type="String" name="titulo"/>
+        </Method>
+        <Method name="mostrarVentanaEntrada" visibility="public" returnType="void" isStatic="true">
+          <Argument type="HttpServletRequest" name="req"/>
+          <Argument type="HttpServletResponse" name="resp"/>
+        </Method>
+        <Method name="error" visibility="public" returnType="void" isStatic="true">
+          <Argument type="HttpServletRequest" name="req"/>
+          <Argument type="HttpServletResponse" name="resp"/>
+          <Argument type="Exception" name="ex"/>
+        </Method>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <UseRelation name="" source="ControladorIntegralNumerica" target="CalculadorIntegralNumerica" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation name="" source="ControladorIntegralNumerica" target="VistaWeb" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation name="" source="ControladorIntegralNumerica" target="VistaConsola" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
