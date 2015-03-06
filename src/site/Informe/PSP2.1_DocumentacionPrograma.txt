@@ -1,0 +1,8 @@
+Cuando se descargue el proyecto, abrir con un navegador de internet los siguientes archivos para conocer la documentación del sistema:
+
+
+/psp21/src/site/DocumentacionJavaDoc/index.html
+
+/psp21/src/site/DocumentacionJavaDoc/apidocs/index.html
+
+
